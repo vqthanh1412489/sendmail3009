@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../css/upload.css" />
+    <link type="text/css" rel="stylesheet" href="../css/button.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/jquery-3.3.1.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#wrapper").click(function () {
+                $('#formUpload').submit();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form id="formUpload" action="/upload" method="post" enctype="multipart/form-data">
+        <div class="wrapper">
+            <div class="file-upload">
+                <input type="file" />
+                <i class="fa fa-arrow-up"><input type="file" name="file"></i>
+
+            </div>
+        </div>
+        <br>
+        <div id="wrapper">
+            <a data-title="Upload File"></a>
+        </div>
+    </form>
+</body>
+
+</html>

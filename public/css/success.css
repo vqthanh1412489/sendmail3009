@@ -1,0 +1,82 @@
+
+* { margin: 0; padding: 0; }
+body { font: 14px Georgia, serif; }
+
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+#page-wrap { width: 490px; margin: 80px auto; }
+
+body { background: #333; text-align: center; color: #eee; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+h1 { font-size: 42px; font-weight: 600; margin: 0 0 30px 0; }
+
+pre {
+	background: black;
+	text-align: left;
+	padding: 20px;
+	margin: 0 auto 30px auto; 
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 1.2em 2em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    color: white;
+  }
+  a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 4px;
+    transition: box-shadow .5s ease, -webkit-transform .2s ease;
+    transition: box-shadow .5s ease, transform .2s ease;
+    transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
+    will-change: transform;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+            transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+  }
+  a:hover::before {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  a::after {
+    position: relative;
+    display: inline-block;
+    content: attr(data-title);
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: transform .2s ease, -webkit-transform .2s ease;
+    font-weight: bold;
+    letter-spacing: .01em;
+    will-change: transform;
+    -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+            transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: perspective(800px);
+            transform: perspective(800px);
+  }
+  
+  #buttonReturn {
+	align-items: center;	
+    display: flex;
+    justify-content: center;
+  }
